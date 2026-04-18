@@ -12,7 +12,7 @@ import org.thymeleaf.spring6.SpringTemplateEngine;
 import org.thymeleaf.spring6.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring6.view.ThymeleafViewResolver;
 import org.thymeleaf.templatemode.TemplateMode;
-
+import org.thymeleaf.extras.java8time.dialect.Java8TimeDialect;
 /**
  * Spring MVC 웹 계층 설정
  *
@@ -60,6 +60,7 @@ public class WebConfig implements WebMvcConfigurer, ApplicationContextAware {
     public SpringTemplateEngine templateEngine() {
         SpringTemplateEngine engine = new SpringTemplateEngine();
         engine.setTemplateResolver(templateResolver());
+        engine.addDialect(new Java8TimeDialect());
         engine.setEnableSpringELCompiler(true);
         return engine;
     }
