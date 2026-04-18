@@ -39,7 +39,7 @@
     </style>
 </head>
 <body>
-<p th:text="${'실습 수행 일시: ' + #temporals.format(#temporals.createNow(), 'yyyy년 MM월 dd일 (E) a hh:mm:ss') + ' | 학번: 2171095 | 성명: 홍길동'}"></p>
+<p th:text="${'실습 수행 일시: ' + #temporals.format(#temporals.createNow(), 'yyyy년 MM월 dd일 (E) a hh:mm:ss') + ' | 학번: 2171095 | 성명: 신한석'}"></p>
     <h1>
         상품 수정
         <span class="editing-badge" th:text="'ID: #' + ${productForm.id}">ID: #1</span>
